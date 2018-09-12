@@ -1,0 +1,13 @@
+def programa2():
+cadena=input("escribe una cadena de texto")
+cadena=""
+cadena2=[]
+for i in (cadena): 
+z=i 
+for x in (z): 
+if x not in cadena2:
+cadena2.append(x)
+                
+print (cadena2)             
+
+
