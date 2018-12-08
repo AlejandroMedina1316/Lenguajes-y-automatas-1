@@ -1,0 +1,10 @@
+def clase 2 ():
+	lista = input (“escribe la cadena de texto”)
+	cadena = “ ”
+	lista2 = [ ]
+	for i in (lista):
+		m = i
+		for x in (m):
+		if x not in lista2:
+		lista2.append (x)
+print (lista2)

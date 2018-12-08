@@ -1,0 +1,22 @@
+improt random
+def clase():
+	alfabeto = input (“ingrese el alfabeto”)
+	n = 4
+	m = 0
+	letra = “ ”
+	lista= [ ]
+	
+while	m<=n:
+for x in range (0, len(alfabeto)):
+letras = random.randint(1,4)
+letra = letra.join(random.choice(alfabeto)) for_in range(letras))
+lista.append(letra)
+letra = “ “
+m = m+1
+	print(lista)
+
+from time import time 
+start = time()
+clase()
+end=time()-start
+print(end)
