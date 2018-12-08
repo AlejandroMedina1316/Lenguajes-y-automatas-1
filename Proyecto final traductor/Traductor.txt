@@ -1,0 +1,35 @@
+def AbrirArchivoTxt():
+    codigoJava = open(r"C:\Users\Adriana-A\Desktop\java.txt",'r')
+    listaDeLineas=codigoJava.readlines()
+    return listaDeLineas
+
+def Traductor(listaDeLineas):
+    bandera = False
+    for i in listaDeLineas:
+        linea = i
+        linea = linea.replace('public static void main(String[] args) {', '')
+        linea = linea.replace('public static void', 'def')
+        linea = linea.replace('public class prueba{', '')
+        linea = linea.replace('{', ':')
+        linea = linea.replace('int ', '')
+        linea = linea.replace('}', '')
+        linea = linea.replace('System.out.println', 'print')
+        linea = linea.replace('\n','')
+        linea = linea.replace(';','')
+        linea = linea.replace('\t','')
+        if bandera == True:
+            linea = '    ' + linea
+            bandera = False
+        elif ':' in linea:
+            bandera = True
+        print(linea)
+
+def ConvertidorDeCodigo():
+    listaDeLineas = AbrirArchivoTxt()
+    Traductor(listaDeLineas)
+
+from time import time
+start = time()    
+CombertidorDeCodigo()
+end = time()- start
+print(end)
